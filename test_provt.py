@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+#
+# vim: set tabstop=4 shiftwidth=4 :
+#
+# Copyright (c) 2018 Protonic Holland
+#
+# Written by David Jander (david@protonic.nl)
+#
+# This file may be used under the terms of the GNU General Public License, version 2.
+# For more details see: https://www.gnu.org/licenses/gpl-2.0.html
 
 from isocan import IsoCanLink
 import asyncio
