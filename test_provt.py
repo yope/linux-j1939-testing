@@ -9,8 +9,9 @@
 # This file may be used under the terms of the GNU General Public License, version 2.
 # For more details see: https://www.gnu.org/licenses/gpl-2.0.html
 
-from isocan import IsoCanLink
+from .isocan import IsoCanLink
 import asyncio
+import sys
 
 class TestJ1939:
 	def __init__(self, ifname, peeraddr):
@@ -87,5 +88,8 @@ class TestVT(TestJ1939):
 		print("Done.")
 
 if __name__ == "__main__":
-	t = TestVT("vcan0", 38)
+	if len(sys.argv) == 1:
+		print("Usage {} <CANIF>".format(sys.argv[0]))
+
+	t = TestVT(sys.argv[1], 38)
 	t.run()
