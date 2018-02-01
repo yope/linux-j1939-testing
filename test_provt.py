@@ -9,7 +9,7 @@
 # This file may be used under the terms of the GNU General Public License, version 2.
 # For more details see: https://www.gnu.org/licenses/gpl-2.0.html
 
-from isocan import IsoCanLink
+from .isocan import IsoCanLink
 import asyncio
 
 class TestJ1939:
